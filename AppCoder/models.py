@@ -2,19 +2,20 @@ from django.db import models
 
 # Create your models here.
 
-class Libro(models.Model):
-    Autor = models.CharField(max_length=40)
-    Categoria = models.CharField(max_length=40)
-    cantidad_paginas = models.IntegerField()
+class Vendedor(models.Model):
+    Nombre = models.CharField(max_length=40)
+    Turno = models.CharField(max_length=40)
+    Monto_caja = models.IntegerField()
 
-class Bibliotecaria(models.Model):
+class Productos(models.Model):
     nombre = models.CharField(max_length=40)
+    precio = models.FloatField()
+    fecha_entrega = models.DateField
     
-class Lector(models.Model):
+class Cliente(models.Model):
     nombre = models.CharField(max_length=40)
     email = models.EmailField()
-    fecha_de_retiro = models.DateField()
-    fecha_de_entrega = models.DateField()
+    fecha_de_pedido= models.DateField()
 
 class Entregado(models.Model):
     Entregado = models.BooleanField()
