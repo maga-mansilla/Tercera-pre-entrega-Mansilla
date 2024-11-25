@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    {% extends "AppCoder/padre.html" %}
-    {% load static %}
-    {% block contenidoQueCambia %}
-    VISTA ENTREGADOS    
-    {% endblock %}
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+       
+            {{ miFormulario.as_table }}
+        
+        <input type="submit" value="Enviando">
+    </form>
+
+
+
 </body>
 </html>

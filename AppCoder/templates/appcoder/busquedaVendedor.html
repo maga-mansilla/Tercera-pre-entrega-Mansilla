@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    {% extends "AppCoder/padre.html" %}
-    {% load static %}
-    {% block contenidoQueCambia %}
-    VISTA ENTREGADOS    
-    {% endblock %}
+    
+   <form action="/buscar/" method="GET">
+        
+    <input type="text" name="Nombre" id="Nombre">
+    <input type="submit" value="Buscar">
+
+
+
+
+   </form>
+
 </body>
 </html>

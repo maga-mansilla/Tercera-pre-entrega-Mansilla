@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Estamos buscando al vendedor/ra : {{ Nombre }}</p>
+
+{% if Vendedores %}
+<ul>
+{% for vendedor in Vendedores %}
+    <li>{{ vendedor.Nombre }}</li>
+    <li>{{ vendedor.Turno }}</li>
+    <li>{{ vendedor.Monto_caja }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+
+</body>
+</html>

@@ -10,7 +10,6 @@ class Vendedor(models.Model):
 class Productos(models.Model):
     nombre = models.CharField(max_length=40)
     precio = models.FloatField()
-    fecha_entrega = models.DateField
     
 class Cliente(models.Model):
     nombre = models.CharField(max_length=40)
@@ -18,5 +17,5 @@ class Cliente(models.Model):
     fecha_de_pedido= models.DateField()
 
 class Entregado(models.Model):
-    Entregado = models.BooleanField()
+    entregado = models.BooleanField()
 
