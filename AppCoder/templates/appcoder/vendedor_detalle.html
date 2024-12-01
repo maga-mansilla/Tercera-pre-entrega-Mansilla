@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+<p>Nombre: <i>{{ vendedor.Nombre }}</i></p>
+<p>Turno: <i>{{ vendedor.Turno }}</i></p>
+<p>Monto_caja: <i>{{ vendedor.Monto_caja }}</i></p>
+
+<p>
+    <a href="{% url 'List' %}">Regresar</a>
+</p>
+
+{% endblock main %}

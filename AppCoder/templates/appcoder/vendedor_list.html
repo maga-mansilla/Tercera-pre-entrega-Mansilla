@@ -1,0 +1,24 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block main %}
+
+    <h1>vendedores - Autoservicio Fabian</h1>
+
+    {% for vendedor in object_list %}
+
+        <li>
+            <p>NOMBRE: {{ vendedor.Nombre }}</p>
+            <p>
+                <a href="{% url 'Detail' vendedor.id %}">Ver</a>
+                <a href="{% url 'Edit' vendedor.id %}">Editar</a>
+                <a href="{% url 'Delete' vendedor.id %}">Borrar</a>
+            </p>
+        </li>
+
+    {% endfor %}
+
+{% endblock main %}
